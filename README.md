@@ -24,7 +24,7 @@ As a part of my web development learning journey, I completed several tasks, inc
 4. **Connect Four Game:** Classic Connect Four game implemented using HTML, CSS, and JavaScript.
 
 ## Usage
-- [Click Here](#https://simonriley-141.github.io/InternpeWebDev/)
+- [Click Here](https://simonriley-141.github.io/InternpeWebDev/)
 To view any of the tasks, simply click on the corresponding "View Task" link in the webpage.
 
 ## License
