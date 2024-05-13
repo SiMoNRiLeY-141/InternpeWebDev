@@ -25,7 +25,7 @@ As a part of my web development learning journey, I completed several tasks, inc
 
 ## Usage
 - [Click Here](https://simonriley-141.github.io/InternpeWebDev/)
-To view any of the tasks, simply click on the corresponding "View Task" link in the webpage.
+- To view any of the tasks, simply click on the corresponding "View Task" link in the webpage.
 
 ## License
 
