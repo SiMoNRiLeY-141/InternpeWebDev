@@ -1,0 +1,147 @@
+body {
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.heading-container {
+  position: absolute;
+  top: 20px;
+  transform: translateX(-50%);
+  padding: 20px;
+  background: linear-gradient(to bottom right, #51ff00d2, #0044ffc5), #ffffff;
+  border-radius: 20px;
+  font-family: cursive;
+  animation: fadeInUp 1s ease forwards;
+}
+
+h1 {
+  margin: 0;
+  font-family: cursive;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 50px;
+  background: linear-gradient(to bottom right, #006effd2, #0044ffc5), #ffffff33;
+  box-shadow: 0 0 10px #0000001a;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  grid-template-rows: repeat(6, 50px);
+  gap: 5px;
+  background-color: #ffffff00;
+  border-radius: 10px;
+  flex-grow: 1;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+
+  background: linear-gradient(to bottom, #ffffff80, #0000001a);
+}
+
+.player1 {
+  background-color: #ff1900;
+}
+
+.player2 {
+  background-color: #f1c40f;
+}
+
+.winningColor {
+  background-color: #004bee;
+}
+
+button#resetBtn {
+  position: absolute;
+  bottom: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fd9104;
+  color: #000000;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+button#resetBtn:hover {
+  background-color: #ff0000;
+  animation: bounce 0.5s ease infinite alternate;
+}
+
+.highlighted {
+  background-color: #ffffff80;
+  animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+
+  from,
+  to {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  from {
+    background-color: #ffffff80;
+  }
+
+  to {
+    background-color: #ffffff;
+  }
+}
