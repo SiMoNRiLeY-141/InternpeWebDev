@@ -16,7 +16,17 @@ function addTask() {
     var daysRemaining = Math.ceil((deadlineValue - today) / (1000 * 60 * 60 * 24));
     var div = document.createElement("div");
     div.classList.add("task-item");
-    div.innerHTML = `<input type="checkbox" onclick="toggleCompletion(this)"> ${task} - ${daysRemaining} days remaining <button class="removeBtn" onclick="removeTask(this)">Remove</button>`;
+    var checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.setAttribute("onclick", "toggleCompletion(this)");
+    var taskText = document.createTextNode(" " + task + " - " + daysRemaining + " days remaining ");
+    var removeButton = document.createElement("button");
+    removeButton.classList.add("removeBtn");
+    removeButton.setAttribute("onclick", "removeTask(this)");
+    removeButton.textContent = "Remove";
+    div.appendChild(checkbox);
+    div.appendChild(taskText);
+    div.appendChild(removeButton);
     taskList.appendChild(div);
     saveTasksToLocalStorage();
     taskInput.value = "";
@@ -56,10 +66,20 @@ function loadTasksFromLocalStorage() {
         tasks.forEach(function (task) {
             var div = document.createElement("div");
             div.classList.add("task-item");
-            div.innerHTML = `<input type="checkbox" onclick="toggleCompletion(this)"> ${task.taskName} - ${task.daysRemaining} days remaining <button class="removeBtn" onclick="removeTask(this)">Remove</button>`;
+            var checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.setAttribute("onclick", "toggleCompletion(this)");
+            var taskText = document.createTextNode(" " + task.taskName + " - " + task.daysRemaining + " days remaining ");
+            var removeButton = document.createElement("button");
+            removeButton.classList.add("removeBtn");
+            removeButton.setAttribute("onclick", "removeTask(this)");
+            removeButton.textContent = "Remove";
+            div.appendChild(checkbox);
+            div.appendChild(taskText);
+            div.appendChild(removeButton);
             if (task.completed) {
                 div.classList.add("completed");
-                div.querySelector("input[type='checkbox']").checked = true;
+                checkbox.checked = true;
             }
             taskList.appendChild(div);
         });
