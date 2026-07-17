@@ -1,4 +1,7 @@
 # InternpeWebDev
+
+[![Deploy static content to Pages](https://github.com/SiMoNRiLeY-141/InternpeWebDev/actions/workflows/deploy.yml/badge.svg)](https://github.com/SiMoNRiLeY-141/InternpeWebDev/actions/workflows/deploy.yml)
+
 Webpages made as part of Web Dev internship at Internpe
 
 # My Tasks Showcase
@@ -26,6 +29,10 @@ As a part of my web development learning journey, I completed several tasks, inc
 ## Usage
 - [Click Here](https://simonriley-141.github.io/InternpeWebDev/)
 - To view any of the tasks, simply click on the corresponding "View Task" link in the webpage.
+
+## Deployment
+
+This website is automatically deployed to GitHub Pages via GitHub Actions. Any changes pushed to the `main` branch trigger the deployment workflow located in [.github/workflows/deploy.yml](file:///d:/Gits/InternpeWebDev/.github/workflows/deploy.yml).
 
 ## License
 
