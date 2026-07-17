@@ -3,31 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tasks</title>
+    <title>Web Development Portfolio | Internpe Tasks</title>
+    <meta name="description" content="Showcase of completed web development tasks for Internpe Internship including Calculator, E-commerce, To-Do List, and Connect Four.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>My Tasks</h1>
+        <div class="header-container">
+            <span class="badge">Web Dev Internship</span>
+            <h1>Internpe Tasks Showcase</h1>
+            <p>A collection of interactive web applications built with HTML, CSS, and modern JavaScript during my internship journey.</p>
+            
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-val">4</span>
+                    <span class="stat-label">Applications</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">100%</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val">Clean</span>
+                    <span class="stat-label">Code</span>
+                </div>
+            </div>
+        </div>
     </header>
-    <main>
-        <div class="task">
-            <h2>Task 1: Create a Calculator app</h2>
-            <a href="tasks/calculator/index.html">View Task</a>
+
+    <section class="controls-section">
+        <div class="search-wrapper">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="M21 21l-4.3-4.3"></path>
+            </svg>
+            <input type="text" id="search-input" placeholder="Search projects or technologies...">
         </div>
-        <div class="task">
-            <h2>Task 2: Create an E-commerce Website</h2>
-            <a href="tasks/ecommerce/index.html">View Task</a>
+        <div class="filter-tags">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="utility">Utilities</button>
+            <button class="filter-btn" data-filter="web">Websites</button>
+            <button class="filter-btn" data-filter="game">Games</button>
         </div>
-        <div class="task">
-            <h2>Task 3: Create a To Do List app</h2>
-            <a href="tasks/todolist/index.html">View Task</a>
-        </div>
-        <div class="task">
-            <h2>Task 4: Build a Connect Four Game</h2>
-            <a href="tasks/connectfour/index.html">View Task</a>
-        </div>
+    </section>
+
+    <main id="projects-grid">
+        <!-- Task 1: Calculator -->
+        <article class="task-card card-calc" data-category="utility">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                    <line x1="9" y1="22" x2="9" y2="16"></line>
+                    <line x1="15" y1="22" x2="15" y2="16"></line>
+                    <line x1="9" y1="16" x2="15" y2="16"></line>
+                    <line x1="9" y1="10" x2="15" y2="10"></line>
+                    <line x1="12" y1="6" x2="12" y2="14"></line>
+                </svg>
+            </div>
+            <span class="card-num">Task 1</span>
+            <h2>Calculator App</h2>
+            <p>A responsive calculator application handling basic arithmetic, floating-point numbers, and percent calculations with clean input handling.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+            </div>
+            <a href="tasks/calculator/index.html" class="card-btn" id="btn-calc">
+                <span>Launch App</span>
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </article>
+
+        <!-- Task 2: E-commerce Website -->
+        <article class="task-card card-ecommerce" data-category="web">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+            </div>
+            <span class="card-num">Task 2</span>
+            <h2>E-Commerce Site</h2>
+            <p>A multi-page prototype online store featuring product listing grids, shopping cart features, fully styled signup/login, and contacts page.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Forms</span>
+            </div>
+            <a href="tasks/ecommerce/index.html" class="card-btn" id="btn-ecom">
+                <span>Visit Store</span>
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </article>
+
+        <!-- Task 3: To Do List -->
+        <article class="task-card card-todolist" data-category="utility">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+            </div>
+            <span class="card-num">Task 3</span>
+            <h2>To Do List App</h2>
+            <p>An interactive task management tool with capabilities to add new tasks, mark items complete, and persist records locally.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">LocalStorage</span>
+            </div>
+            <a href="tasks/todolist/index.html" class="card-btn" id="btn-todo">
+                <span>Open Tasks</span>
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </article>
+
+        <!-- Task 4: Connect Four Game -->
+        <article class="task-card card-connectfour" data-category="game">
+            <div class="card-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="18" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <circle cx="18" cy="18" r="3"></circle>
+                </svg>
+            </div>
+            <span class="card-num">Task 4</span>
+            <h2>Connect Four Game</h2>
+            <p>A beautiful grid implementation of the classic two-player Connect Four strategy game, built with advanced CSS layout and DOM logic.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS Grid</span>
+                <span class="tech-tag">Animations</span>
+            </div>
+            <a href="tasks/connectfour/index.html" class="card-btn" id="btn-c4">
+                <span>Play Game</span>
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </article>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Internpe Showcase Portal. View repository on <a href="https://github.com/SiMoNRiLeY-141/InternpeWebDev" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
